@@ -1,179 +1,390 @@
 import { Component } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { CommonModule } from '@angular/common';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [CommonModule, MatButtonModule],
+  imports: [CommonModule, MatButtonModule, MatIconModule],
   template: `
     <section class="about-section">
-      <div class="about-content">
-        <div class="text-content">
-          <h2 class="about-title">¿Quiénes Somos?</h2>
-          <p class="about-description">
-            NAPEX LOGISTICS es un gestor logístico comprometido en optimizar la cadena de suministro,
-            garantizando la eficiencia, rentabilidad y satisfacción del cliente.
-          </p>
-          <!-- <button mat-raised-button color="primary" class="cta-button">Conoce nuestra historia</button> -->
-        </div>
+      <div class="background-pattern"></div>
 
-        <div class="image-grid">
-          <div class="image-container main-image">
-            <img src="assets/napex2.jpg" alt="Almacén logístico moderno" loading="lazy" />
-            <div class="image-overlay"></div>
+      <div class="about-container">
+        <div class="content-wrapper">
+          <div class="text-content">
+            <h2 class="section-title">
+              <span class="title-line">¿Quiénes Somos?</span>
+              <span class="title-decorator"></span>
+            </h2>
+
+            <p class="section-description">
+              En <strong>NAPEX LOGISTICS</strong> somos especialistas en
+              optimización de cadena de suministro, garantizando la eficiencia,
+              rentabilidad y satisfacción del cliente ofreciendo<span
+                class="highlight"
+              >
+                soluciones logísticas integrales.</span
+              >
+            </p>
+
           </div>
-          <div class="image-container secondary-image">
-            <img src="assets/napex3.jpg" alt="Equipo de NAPEX LOGISTICS" loading="lazy" />
-            <div class="image-overlay"></div>
+
+          <div class="media-content">
+            <div class="main-image">
+              <img
+                src="assets/napex2.jpg"
+                alt="Instalaciones de NAPEX LOGISTICS"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="secondary-content">
+              <div class="stats-card">
+                <div class="stat-item">
+                  <span class="stat-number">Alta</span>
+                  <span class="stat-label">Satisfacción clientes</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-number">Soporte</span>
+                  <span class="stat-label">Eficaz</span>
+                </div>
+              </div>
+
+              <div class="team-image">
+                <img
+                  src="assets/napex3.jpg"
+                  alt="Equipo de NAPEX LOGISTICS"
+                  loading="lazy"
+                />
+
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
   `,
-  styles: [`
-    .about-section {
-      padding: 6rem 1rem;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .about-content {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      align-items: center;
-    }
-
-    .text-content {
-      padding: 2rem;
-      position: relative;
-      z-index: 2;
-    }
-
-    .about-title {
-      font-size: clamp(1.8rem, 3vw, 2.5rem);
-      color: #0d47a1;
-      margin-bottom: 1.5rem;
-      position: relative;
-      display: inline-block;
-    }
-
-    .about-title::after {
-      content: '';
-      position: absolute;
-      bottom: -10px;
-      left: 0;
-      width: 60px;
-      height: 3px;
-      background: linear-gradient(90deg, #0d47a1, #1976d2);
-    }
-
-    .about-description {
-      font-size: clamp(1rem, 1.2vw, 1.2rem);
-      line-height: 1.8;
-      color: #333;
-      margin-bottom: 2rem;
-    }
-
-    .cta-button {
-      padding: 0.8rem 2rem;
-      font-weight: 500;
-      border-radius: 50px;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 6px rgba(13, 71, 161, 0.1);
-    }
-
-    .cta-button:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 12px rgba(13, 71, 161, 0.2);
-    }
-
-    .image-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-      height: 400px;
-    }
-
-    .image-container {
-      position: relative;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease;
-    }
-
-    .image-container:hover {
-      transform: translateY(-5px);
-    }
-
-    .main-image {
-      grid-row: span 2;
-    }
-
-    .secondary-image {
-      align-self: end;
-    }
-
-    .image-container img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-    }
-
-    .image-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1));
-    }
-
-    /* Responsive Design */
-    @media (max-width: 992px) {
-      .about-content {
-        grid-template-columns: 1fr;
-      }
-
-      .text-content {
-        text-align: center;
-      }
-
-      .about-title::after {
-        left: 50%;
-        transform: translateX(-50%);
-      }
-
-      .image-grid {
-        height: 300px;
-        margin-top: 2rem;
-      }
-    }
-
-    @media (max-width: 576px) {
+  styles: [
+    `
+      /* Base Styles */
       .about-section {
-        padding: 4rem 1rem;
+        position: relative;
+        padding: 8rem 1rem;
+        overflow: hidden;
+        background-color: #f8fafc;
       }
 
-      .image-grid {
-        grid-template-columns: 1fr;
-        height: auto;
+      .background-pattern {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: radial-gradient(
+          rgba(38, 56, 110, 0.1) 1px,
+          transparent 1px
+        );
+        background-size: 30px 30px;
+        opacity: 0.6;
+        z-index: 0;
+      }
+
+      .about-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+      }
+
+      .content-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+      }
+
+      /* Text Content Styles */
+      .text-content {
+        padding: 2rem;
+      }
+
+      .section-title {
+        font-size: clamp(2rem, 4vw, 3rem);
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 2rem;
+        color: #26386e;
+        position: relative;
+      }
+
+      .title-decorator {
+        display: block;
+        width: 60px;
+        height: 4px;
+        background: linear-gradient(90deg, #7bc24a, #26386e);
+        margin-top: 1rem;
+        border-radius: 2px;
+      }
+
+      .section-description {
+        font-size: clamp(1rem, 1.5vw, 1.2rem);
+        line-height: 1.8;
+        color: #4a5568;
+        margin-bottom: 2.5rem;
+      }
+
+      .highlight {
+        color: #7bc24a;
+        font-weight: 600;
+      }
+
+      /* Feature List */
+      .feature-list {
+        list-style: none;
+        padding: 0;
+        margin: 2rem 0 3rem;
+      }
+
+      .feature-item {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1.2rem;
+        font-size: 1.1rem;
+        color: #2d3748;
+      }
+
+      .feature-icon {
+        color: #7bc24a;
+        font-size: 1.4rem;
+      }
+
+      /* CTA Button */
+      .cta-button {
+        background-color: #26386e;
+        color: white;
+        padding: 1rem 2.5rem;
+        font-size: 1.1rem;
+        font-weight: 500;
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        box-shadow: 0 4px 6px rgba(38, 56, 110, 0.1);
+      }
+
+      .cta-button:hover {
+        background-color: #1e2d56;
+        transform: translateY(-3px);
+        box-shadow: 0 8px 15px rgba(38, 56, 110, 0.2);
+      }
+
+      .cta-button mat-icon {
+        transition: transform 0.3s ease;
+      }
+
+      .cta-button:hover mat-icon {
+        transform: translateX(5px);
+      }
+
+      /* Media Content */
+      .media-content {
+        display: grid;
+        grid-template-rows: auto auto;
+        gap: 1.5rem;
+        height: 100%;
       }
 
       .main-image {
-        grid-row: span 1;
-        height: 250px;
+        position: relative;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        height: 400px;
       }
 
-      .secondary-image {
-        height: 200px;
+      .main-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
       }
-    }
-  `]
+
+      .main-image:hover img {
+        transform: scale(1.03);
+      }
+
+      .image-badge {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        background: rgba(255, 255, 255, 0.9);
+        padding: 0.8rem 1.2rem;
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-weight: 600;
+        color: #26386e;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .image-badge mat-icon {
+        color: #7bc24a;
+      }
+
+      .secondary-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+      }
+
+      .stats-card {
+        background: white;
+        border-radius: 12px;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        border: 1px solid rgba(0, 0, 0, 0.03);
+      }
+
+      .stat-item {
+        margin-bottom: 1rem;
+      }
+
+      .stat-item:last-child {
+        margin-bottom: 0;
+      }
+
+      .stat-number {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #7bc24a;
+        display: block;
+        line-height: 1;
+      }
+
+      .stat-label {
+        font-size: 0.9rem;
+        color: #4a5568;
+      }
+
+      .team-image {
+        position: relative;
+        border-radius: 12px;
+        overflow: hidden;
+        height: 100%;
+      }
+
+      .team-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .image-caption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+        padding: 1.5rem 1rem 1rem;
+        color: white;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-weight: 500;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 1200px) {
+        .content-wrapper {
+          gap: 3rem;
+        }
+
+        .main-image {
+          height: 350px;
+        }
+      }
+
+      @media (max-width: 992px) {
+        .content-wrapper {
+          grid-template-columns: 1fr;
+          gap: 3rem;
+        }
+
+        .text-content {
+          text-align: center;
+          padding: 0;
+        }
+
+        .title-decorator {
+          margin: 1rem auto 0;
+        }
+
+        .feature-list {
+          max-width: 500px;
+          margin: 2rem auto 3rem;
+        }
+
+        .cta-button {
+          margin: 0 auto;
+        }
+
+        .media-content {
+          max-width: 800px;
+          margin: 0 auto;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .about-section {
+          padding: 6rem 1rem;
+        }
+
+        .secondary-content {
+          grid-template-columns: 1fr;
+        }
+
+        .stats-card {
+          flex-direction: row;
+          gap: 2rem;
+          justify-content: center;
+        }
+
+        .stat-item {
+          margin-bottom: 0;
+          text-align: center;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .about-section {
+          padding: 4rem 1rem;
+        }
+
+        .main-image {
+          height: 280px;
+        }
+
+        .image-badge {
+          bottom: 15px;
+          left: 15px;
+          padding: 0.6rem 1rem;
+          font-size: 0.9rem;
+        }
+
+        .stats-card {
+          flex-direction: column;
+          gap: 1rem;
+        }
+      }
+    `,
+  ],
 })
 export class AboutComponent {}
