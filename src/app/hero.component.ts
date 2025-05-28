@@ -11,32 +11,56 @@ import { CommonModule } from '@angular/common';
       <div class="hero-background">
         <img class="hero-bg" src="assets/napex1.jpg" alt="Puerto logístico" loading="lazy" />
         <div class="overlay-gradient"></div>
+        <div class="particles"></div>
       </div>
+
       <div class="hero-content">
-        <h1 class="hero-title">Gestión Logística Integral</h1>
-        <p class="hero-subtitle">
-          Optimizamos tu cadena de suministro para lograr eficiencia, rentabilidad y satisfacción del cliente.
-        </p>
-        <button mat-raised-button color="accent" class="hero-cta" aria-label="Conoce nuestros servicios">
-          Conoce nuestros servicios
-        </button>
+        <div class="content-wrapper">
+          <h1 class="hero-title">
+            <span class="title-line">Gestión Logística</span>
+            <span class="title-line accent">Integral</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Optimizamos tu cadena de suministro para lograr <span class="highlight">eficiencia</span>,
+            <span class="highlight">rentabilidad</span> y <span class="highlight">satisfacción</span> del cliente.
+          </p>
+
+          <div class="cta-container">
+            <button mat-raised-button class="hero-cta primary" aria-label="Conoce nuestros servicios">
+              Conoce nuestros servicios
+              <span class="arrow">→</span>
+            </button>
+            <button mat-stroked-button class="hero-cta secondary" aria-label="Contáctanos">
+              Contáctanos ahora
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-indicator">
+        <span>Scroll</span>
+        <div class="mouse">
+          <div class="wheel"></div>
+        </div>
       </div>
     </section>
   `,
   styles: [`
+    /* Base Styles */
     .hero {
       position: relative;
       height: 100vh;
       max-height: 1200px;
-      min-height: 600px;
+      min-height: 650px;
       display: flex;
       align-items: center;
       justify-content: center;
-      text-align: center;
       overflow: hidden;
       isolation: isolate;
     }
 
+    /* Background Styles */
     .hero-background {
       position: absolute;
       inset: 0;
@@ -49,42 +73,79 @@ import { CommonModule } from '@angular/common';
       object-fit: cover;
       object-position: center;
       will-change: transform;
+      animation: zoomEffect 20s infinite alternate;
     }
 
     .overlay-gradient {
       position: absolute;
       inset: 0;
       background: linear-gradient(
-        to right,
-        rgba(0, 0, 0, 0.7) 0%,
-        rgba(0, 0, 0, 0.3) 100%
+        135deg,
+        rgba(38, 56, 110, 0.85) 0%,
+        rgba(38, 56, 110, 0.6) 100%
       );
     }
 
+    .particles {
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%237bc24a' fill-opacity='0.2' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
+      opacity: 0.5;
+    }
+
+    /* Content Styles */
     .hero-content {
+      width: 100%;
       padding: 2rem;
       color: white;
-      max-width: 1200px;
-      margin: 0 auto;
+      text-align: center;
       animation: fadeInUp 1s ease-out;
     }
 
+    .content-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
     .hero-title {
-      font-size: clamp(2rem, 5vw, 3.5rem);
-      font-weight: 700;
-      line-height: 1.2;
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      font-weight: 800;
+      line-height: 1.1;
       margin-bottom: 1.5rem;
-      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      display: flex;
+      flex-direction: column;
+      letter-spacing: -0.5px;
+    }
+
+    .title-line {
+      display: block;
+    }
+
+    .accent {
+      color: #7bc24a;
     }
 
     .hero-subtitle {
-      font-size: clamp(1rem, 2vw, 1.5rem);
-      line-height: 1.6;
+      font-size: clamp(1.1rem, 2.2vw, 1.6rem);
+      line-height: 1.7;
       margin-bottom: 2.5rem;
       max-width: 800px;
       margin-left: auto;
       margin-right: auto;
-      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+      font-weight: 300;
+    }
+
+    .highlight {
+      font-weight: 600;
+      color: #7bc24a;
+    }
+
+    /* Button Styles */
+    .cta-container {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
     }
 
     .hero-cta {
@@ -92,19 +153,84 @@ import { CommonModule } from '@angular/common';
       font-size: 1.1rem;
       font-weight: 500;
       border-radius: 50px;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      min-width: 220px;
     }
 
-    .hero-cta:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    .primary {
+      background-color: #7bc24a;
+      color: white;
+      box-shadow: 0 4px 15px rgba(123, 194, 74, 0.3);
     }
 
+    .primary:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 8px 25px rgba(123, 194, 74, 0.4);
+      background-color: #6aad3f;
+    }
+
+    .secondary {
+      border-color: white;
+      color: white;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(5px);
+    }
+
+    .secondary:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateY(-3px);
+    }
+
+    .arrow {
+      margin-left: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .primary:hover .arrow {
+      transform: translateX(4px);
+    }
+
+    /* Scroll Indicator */
+    .scroll-indicator {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 0.8rem;
+      opacity: 0.8;
+      animation: bounce 2s infinite;
+    }
+
+    .mouse {
+      width: 24px;
+      height: 40px;
+      border: 2px solid white;
+      border-radius: 12px;
+      margin-top: 8px;
+      position: relative;
+    }
+
+    .wheel {
+      width: 4px;
+      height: 8px;
+      background: white;
+      border-radius: 2px;
+      position: absolute;
+      top: 6px;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: scrollWheel 2s infinite;
+    }
+
+    /* Animations */
     @keyframes fadeInUp {
       from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(30px);
       }
       to {
         opacity: 1;
@@ -112,18 +238,90 @@ import { CommonModule } from '@angular/common';
       }
     }
 
-    /* Responsive adjustments */
+    @keyframes zoomEffect {
+      0% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(1.05);
+      }
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0) translateX(-50%);
+      }
+      40% {
+        transform: translateY(-10px) translateX(-50%);
+      }
+      60% {
+        transform: translateY(-5px) translateX(-50%);
+      }
+    }
+
+    @keyframes scrollWheel {
+      0% {
+        opacity: 1;
+        top: 6px;
+      }
+      100% {
+        opacity: 0;
+        top: 18px;
+      }
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 992px) {
+      .hero-title {
+        font-size: clamp(2rem, 7vw, 3.5rem);
+      }
+
+      .hero-subtitle {
+        font-size: clamp(1rem, 2.5vw, 1.4rem);
+      }
+
+      .hero-cta {
+        padding: 0.8rem 1.8rem;
+        min-width: 180px;
+      }
+    }
+
     @media (max-width: 768px) {
       .hero {
-        min-height: 500px;
+        min-height: 600px;
       }
 
       .hero-content {
         padding: 1.5rem;
       }
 
+      .cta-container {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .hero-cta {
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+      }
+
       .overlay-gradient {
-        background: rgba(0, 0, 0, 0.6);
+        background: linear-gradient(
+          135deg,
+          rgba(38, 56, 110, 0.9) 0%,
+          rgba(38, 56, 110, 0.7) 100%
+        );
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-title {
+        flex-direction: column;
+      }
+
+      .scroll-indicator {
+        display: none;
       }
     }
   `]
