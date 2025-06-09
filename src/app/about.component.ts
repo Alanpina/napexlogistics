@@ -28,7 +28,6 @@ import { MatIconModule } from '@angular/material/icon';
                 soluciones logísticas integrales.</span
               >
             </p>
-
           </div>
 
           <div class="media-content">
@@ -38,28 +37,6 @@ import { MatIconModule } from '@angular/material/icon';
                 alt="Instalaciones de NAPEX LOGISTICS"
                 loading="lazy"
               />
-            </div>
-
-            <div class="secondary-content">
-              <div class="stats-card">
-                <div class="stat-item">
-                  <span class="stat-number">Alta</span>
-                  <span class="stat-label">Satisfacción clientes</span>
-                </div>
-                <div class="stat-item">
-                  <span class="stat-number">Soporte</span>
-                  <span class="stat-label">Eficaz</span>
-                </div>
-              </div>
-
-              <div class="team-image">
-                <img
-                  src="assets/napex3.jpg"
-                  alt="Equipo de NAPEX LOGISTICS"
-                  loading="lazy"
-                />
-
-              </div>
             </div>
           </div>
         </div>
@@ -115,7 +92,7 @@ import { MatIconModule } from '@angular/material/icon';
         font-weight: 700;
         line-height: 1.2;
         margin-bottom: 2rem;
-        color: #26386e;
+        color: #1e3b6f;
         position: relative;
       }
 
@@ -123,7 +100,7 @@ import { MatIconModule } from '@angular/material/icon';
         display: block;
         width: 60px;
         height: 4px;
-        background: linear-gradient(90deg, #7bc24a, #26386e);
+        background: linear-gradient(90deg, #7ec142, #1e3b6f);
         margin-top: 1rem;
         border-radius: 2px;
       }
@@ -136,7 +113,7 @@ import { MatIconModule } from '@angular/material/icon';
       }
 
       .highlight {
-        color: #7bc24a;
+        color: #1e3b6f;
         font-weight: 600;
       }
 
@@ -157,13 +134,13 @@ import { MatIconModule } from '@angular/material/icon';
       }
 
       .feature-icon {
-        color: #7bc24a;
+        color: #7ec142;
         font-size: 1.4rem;
       }
 
       /* CTA Button */
       .cta-button {
-        background-color: #26386e;
+        background-color: #1e3b6f;
         color: white;
         padding: 1rem 2.5rem;
         font-size: 1.1rem;
@@ -203,7 +180,7 @@ import { MatIconModule } from '@angular/material/icon';
         border-radius: 12px;
         overflow: hidden;
         box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        height: 400px;
+        height: 600px;
       }
 
       .main-image img {
@@ -228,12 +205,12 @@ import { MatIconModule } from '@angular/material/icon';
         align-items: center;
         gap: 0.5rem;
         font-weight: 600;
-        color: #26386e;
+        color: #1e3b6f;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       }
 
       .image-badge mat-icon {
-        color: #7bc24a;
+        color: #7ec142;
       }
 
       .secondary-content {
@@ -264,7 +241,7 @@ import { MatIconModule } from '@angular/material/icon';
       .stat-number {
         font-size: 2rem;
         font-weight: 700;
-        color: #7bc24a;
+        color: #7ec142;
         display: block;
         line-height: 1;
       }

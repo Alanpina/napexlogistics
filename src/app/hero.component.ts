@@ -11,37 +11,19 @@ import { CommonModule } from '@angular/common';
       <div class="hero-background">
         <img class="hero-bg" src="assets/napex1.jpg" alt="Puerto logístico" loading="lazy" />
         <div class="overlay-gradient"></div>
-        <div class="particles"></div>
       </div>
 
       <div class="hero-content">
         <div class="content-wrapper">
           <h1 class="hero-title">
             <span class="title-line">Gestión Logística</span>
-            <span class="title-line accent">Integral</span>
+            <span class="title-line">Integral</span>
           </h1>
 
           <p class="hero-subtitle">
             Optimizamos tu cadena de suministro para lograr <span class="highlight">eficiencia</span>,
             <span class="highlight">rentabilidad</span> y <span class="highlight">satisfacción</span> del cliente.
           </p>
-
-          <div class="cta-container">
-            <button mat-raised-button class="hero-cta primary" aria-label="Conoce nuestros servicios">
-              Conoce nuestros servicios
-              <span class="arrow">→</span>
-            </button>
-            <button mat-stroked-button class="hero-cta secondary" aria-label="Contáctanos">
-              Contáctanos ahora
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <div class="scroll-indicator">
-        <span>Scroll</span>
-        <div class="mouse">
-          <div class="wheel"></div>
         </div>
       </div>
     </section>
@@ -84,13 +66,6 @@ import { CommonModule } from '@angular/common';
         rgba(38, 56, 110, 0.85) 0%,
         rgba(38, 56, 110, 0.6) 100%
       );
-    }
-
-    .particles {
-      position: absolute;
-      inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%237bc24a' fill-opacity='0.2' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
-      opacity: 0.5;
     }
 
     /* Content Styles */
@@ -137,7 +112,7 @@ import { CommonModule } from '@angular/common';
 
     .highlight {
       font-weight: 600;
-      color: #7bc24a;
+      color: white;
     }
 
     /* Button Styles */
@@ -158,18 +133,19 @@ import { CommonModule } from '@angular/common';
     }
 
     .primary {
-      background-color: #7bc24a;
-      color: white;
+      background-color: white;
+      color: #325fae;
       box-shadow: 0 4px 15px rgba(123, 194, 74, 0.3);
     }
 
     .primary:hover {
       transform: translateY(-3px) scale(1.02);
       box-shadow: 0 8px 25px rgba(123, 194, 74, 0.4);
-      background-color: #6aad3f;
+      background-color: #6aad3f !important;
+      color: white !important
     }
 
-    .secondary {
+    .secondary, .mat-mdc-outlined-button:not(:disabled) {
       border-color: white;
       color: white;
       background: rgba(255, 255, 255, 0.1);

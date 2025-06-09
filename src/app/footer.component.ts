@@ -10,21 +10,16 @@ import { CommonModule } from '@angular/common';
     <footer class="footer">
       <div class="footer-container">
         <div class="footer-brand">
-          <img src="assets/logo-white.png" alt="NAPEX LOGISTICS" class="footer-logo">
+          <img src="assets/logo.png" alt="NAPEX LOGISTICS" class="footer-logo">
           <p class="footer-tagline">Soluciones logísticas integrales para tu cadena de suministro</p>
           <div class="social-links">
-            <a href="#" aria-label="Facebook"><mat-icon>facebook</mat-icon></a>
-            <a href="#" aria-label="LinkedIn"><mat-icon>linkedin</mat-icon></a>
-            <a href="#" aria-label="Instagram"><mat-icon>instagram</mat-icon></a>
+            <i class="fa fa-whatsapp" aria-hidden="true"></i>
+            <i class="fa fa-linkedin" aria-hidden="true"></i>
           </div>
         </div>
 
         <div class="footer-contact">
           <h3>Contacto</h3>
-          <div class="contact-item">
-            <mat-icon>person</mat-icon>
-            <span>Paulina Medina – Comercial</span>
-          </div>
           <div class="contact-item">
             <mat-icon>phone</mat-icon>
             <span>+52 314 102 9592</span>
@@ -35,7 +30,7 @@ import { CommonModule } from '@angular/common';
           </div>
           <div class="contact-item">
             <mat-icon>location_on</mat-icon>
-            <span>Ciudad de México, México</span>
+            <span>Manzanillo, Colima, México</span>
           </div>
         </div>
 
@@ -43,26 +38,25 @@ import { CommonModule } from '@angular/common';
           <h3>Enlaces rápidos</h3>
           <ul>
             <li><a href="#">Inicio</a></li>
+            <li><a href="#">¿Quienes Somos?</a></li>
             <li><a href="#">Servicios</a></li>
-            <li><a href="#">Nosotros</a></li>
-            <li><a href="#">Contacto</a></li>
-            <li><a href="#">Blog</a></li>
+            <li><a href="#">¿Por qué elegirnos?</a></li>
           </ul>
         </div>
       </div>
 
       <div class="footer-bottom">
         <p>© 2025 NAPEX LOGISTICS. Todos los derechos reservados.</p>
-        <div class="legal-links">
+        <!-- <div class="legal-links">
           <a href="#">Política de privacidad</a>
           <a href="#">Términos de servicio</a>
-        </div>
+        </div> -->
       </div>
     </footer>
   `,
   styles: [`
     .footer {
-      background: linear-gradient(135deg, #26386e 0%, #1a2a57 100%);
+      background: linear-gradient(135deg, #325fae 0%, #1e3b6f 100%);
       color: white;
       padding: 3rem 1rem 0;
       font-size: 0.95rem;
@@ -113,7 +107,7 @@ import { CommonModule } from '@angular/common';
     }
 
     .social-links a:hover {
-      background: #7bc24a;
+      background: #7ec142;
       transform: translateY(-3px);
     }
 
@@ -131,7 +125,7 @@ import { CommonModule } from '@angular/common';
       left: 0;
       width: 40px;
       height: 2px;
-      background: #7bc24a;
+      background: #7ec142;
     }
 
     .contact-item {
@@ -143,7 +137,7 @@ import { CommonModule } from '@angular/common';
     }
 
     .contact-item mat-icon {
-      color: #7bc24a;
+      color: #7ec142;
       font-size: 1.2rem;
       width: auto;
       height: auto;
@@ -176,7 +170,7 @@ import { CommonModule } from '@angular/common';
       left: -15px;
       opacity: 0;
       transition: all 0.3s ease;
-      color: #7bc24a;
+      color: #7ec142;
     }
 
     .footer-links a:hover::before {
@@ -206,7 +200,7 @@ import { CommonModule } from '@angular/common';
     }
 
     .legal-links a:hover {
-      color: #7bc24a;
+      color: #7ec142;
     }
 
     @media (max-width: 768px) {

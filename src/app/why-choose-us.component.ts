@@ -1,50 +1,54 @@
 import { Component } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { CommonModule } from '@angular/common';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-why-choose-us',
   standalone: true,
-  imports: [CommonModule, MatButtonModule],
+  imports: [CommonModule, MatButtonModule, MatIconModule],
   template: `
     <section class="why-section">
-      <div class="background-image"></div>
+      <div class="background-pattern"></div>
 
       <div class="content-container">
         <div class="text-content">
-          <h2 class="section-title">¿Por qué elegir <span>NAPEX LOGISTICS</span>?</h2>
+          <h2 class="section-title">
+            <span class="title-line">¿Por qué elegir </span>
+            <span class="title-line accent">NAPEX LOGISTICS?</span>
+          </h2>
+
           <p class="section-description">
-            Nuestra experiencia y la seguridad con la que manejamos cada operación nos distingue,
-            brindando tranquilidad y resultados excepcionales a nuestros clientes.
+            Ofrecemos servicios integrales para todo tipo de operaciones de importación y exportación,
+            con distribución hasta el destino final. Nuestro conocimiento y procesos garantizan
+            <span class="highlight">optimización de tiempos y costos</span> en cada operación.
           </p>
 
           <div class="features-grid">
             <div class="feature-card">
               <div class="feature-icon">✓</div>
-              <h3>+15 años de experiencia</h3>
-              <p>Expertos en logística internacional y comercio exterior</p>
+              <h3>Operaciones completas</h3>
+              <p>Gestión integral desde origen hasta destino final</p>
             </div>
 
             <div class="feature-card">
               <div class="feature-icon">✓</div>
-              <h3>Tecnología avanzada</h3>
-              <p>Sistemas de seguimiento en tiempo real para tu mercancía</p>
+              <h3>Expertos en comercio</h3>
+              <p>Conocimiento especializado en importación/exportación</p>
             </div>
 
             <div class="feature-card">
               <div class="feature-icon">✓</div>
-              <h3>Equipo especializado</h3>
-              <p>Profesionales certificados en operaciones logísticas</p>
+              <h3>Optimización garantizada</h3>
+              <p>Procesos diseñados para reducir tiempos y costos</p>
             </div>
 
             <div class="feature-card">
               <div class="feature-icon">✓</div>
-              <h3>Cobertura global</h3>
-              <p>Red de partners en los principales puertos y aeropuertos</p>
+              <h3>Soporte personalizado</h3>
+              <p>Acompañamiento en cada etapa de tu operación</p>
             </div>
           </div>
-
-          <!-- <button mat-raised-button class="cta-button">Conoce nuestra historia</button> -->
         </div>
 
         <div class="image-content">
@@ -55,21 +59,24 @@ import { CommonModule } from '@angular/common';
     </section>
   `,
   styles: [`
+    /* Base Styles */
     .why-section {
       position: relative;
-      padding: 5rem 1rem;
+      padding: 6rem 1rem;
+      background: #f8fafc;
       overflow: hidden;
-      color: #26386e;
     }
 
-    .background-image {
+    .background-pattern {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(135deg, rgba(123, 194, 74, 0.1) 0%, rgba(38, 56, 110, 0.1) 100%);
-      z-index: -1;
+      background-image: radial-gradient(rgba(38, 56, 110, 0.08) 1px, transparent 1px);
+      background-size: 40px 40px;
+      opacity: 0.4;
+      z-index: 0;
     }
 
     .content-container {
@@ -77,57 +84,67 @@ import { CommonModule } from '@angular/common';
       margin: 0 auto;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 3rem;
+      gap: 4rem;
       align-items: center;
+      position: relative;
+      z-index: 1;
     }
 
+    /* Text Content */
     .text-content {
-      padding: 2rem;
+      padding: 1rem;
     }
 
     .section-title {
-      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
       margin-bottom: 1.5rem;
       font-weight: 700;
-      line-height: 1.3;
+      line-height: 1.2;
+      color: #1e3b6f;
     }
 
-    .section-title span {
-      color: #7bc24a;
+    .accent {
+      color: #7ec142;
     }
 
     .section-description {
-      font-size: 1.1rem;
+      font-size: clamp(1rem, 1.5vw, 1.2rem);
       line-height: 1.8;
-      margin-bottom: 3rem;
       color: #4a5568;
+      margin-bottom: 3rem;
     }
 
+    .highlight {
+      color: #1e3b6f;
+      font-weight: 600;
+    }
+
+    /* Features Grid */
     .features-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 1.5rem;
-      margin-bottom: 3rem;
+      margin-bottom: 2rem;
     }
 
     .feature-card {
       background: white;
       padding: 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+      border-left: 3px solid #7ec142;
       transition: all 0.3s ease;
-      border-left: 3px solid #7bc24a;
     }
 
     .feature-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 10px 15px rgba(38, 56, 110, 0.1);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
     }
 
     .feature-icon {
-      width: 30px;
-      height: 30px;
-      background: #7bc24a;
+      width: 28px;
+      height: 28px;
+      background: #7ec142;
       color: white;
       border-radius: 50%;
       display: flex;
@@ -135,40 +152,29 @@ import { CommonModule } from '@angular/common';
       justify-content: center;
       margin-bottom: 1rem;
       font-weight: bold;
+      font-size: 1rem;
     }
 
     .feature-card h3 {
       font-size: 1.1rem;
+      color: #1e3b6f;
       margin-bottom: 0.5rem;
-      color: #26386e;
+      font-weight: 600;
     }
 
     .feature-card p {
       font-size: 0.9rem;
-      color: #4a5568;
+      color: #64748b;
       line-height: 1.6;
     }
 
-    .cta-button {
-      background-color: #26386e;
-      color: white;
-      padding: 0.8rem 2rem;
-      font-weight: 500;
-      border-radius: 4px;
-      transition: all 0.3s ease;
-    }
-
-    .cta-button:hover {
-      background-color: #1e2d56;
-      transform: translateY(-2px);
-    }
-
+    /* Image Content */
     .image-content {
       position: relative;
       height: 500px;
-      border-radius: 8px;
+      border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
     }
 
     .team-image {
@@ -183,32 +189,49 @@ import { CommonModule } from '@angular/common';
       left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(to top, rgba(38, 56, 110, 0.3), rgba(123, 194, 74, 0.1));
+      background: linear-gradient(to top, rgba(38, 56, 110, 0.3), transparent);
     }
 
     /* Responsive Design */
-    @media (max-width: 992px) {
+    @media (max-width: 1024px) {
+      .content-container {
+        gap: 3rem;
+      }
+
+      .image-content {
+        height: 450px;
+      }
+    }
+
+    @media (max-width: 768px) {
       .content-container {
         grid-template-columns: 1fr;
+      }
+
+      .text-content {
+        text-align: center;
+        padding: 0;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: 0 auto 2rem;
       }
 
       .image-content {
         height: 400px;
         order: -1;
       }
-
-      .text-content {
-        padding: 1rem;
-      }
     }
 
-    @media (max-width: 576px) {
-      .features-grid {
-        grid-template-columns: 1fr;
+    @media (max-width: 480px) {
+      .why-section {
+        padding: 4rem 1rem;
       }
 
-      .why-section {
-        padding: 3rem 1rem;
+      .image-content {
+        height: 300px;
       }
     }
   `]

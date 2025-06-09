@@ -65,7 +65,7 @@ import { CommonModule } from '@angular/common';
         <!-- Menú de idioma -->
         <div class="actions-container">
           <button mat-button class="contact-button" routerLink="/contact">
-            <mat-icon>email</mat-icon>
+            <mat-icon style="color: white;">email</mat-icon>
             <span>Contacto</span>
           </button>
 
@@ -157,7 +157,7 @@ import { CommonModule } from '@angular/common';
   styles: [
     `
       .toolbar {
-        background: linear-gradient(135deg, #0d47a1 0%, #1976d2 100%);
+        background: linear-gradient(135deg, #F5F5F5 0%, #F5F5F5 100%);
         color: white;
         padding: 0 2rem;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -186,10 +186,8 @@ import { CommonModule } from '@angular/common';
         align-items: center;
         height: 100%;
         padding: 8px 0;
-        background-color: rgba(255, 255, 255, 0.9);
         border-radius: 6px;
         margin-right: 16px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         transition: all 0.3s ease;
       }
 
@@ -212,7 +210,7 @@ import { CommonModule } from '@angular/common';
       }
 
       .nav-link {
-        color: white !important;
+        color: #1e3b6f !important;
         font-weight: 500;
         letter-spacing: 0.5px;
         position: relative;
@@ -236,7 +234,7 @@ import { CommonModule } from '@angular/common';
         left: 0;
         width: 100%;
         height: 0;
-        background: #7bc24a;
+        background: #1e3b6f;
         transition: height 0.3s ease;
         z-index: 0;
       }
@@ -278,7 +276,7 @@ import { CommonModule } from '@angular/common';
 
       .contact-button {
         color: white;
-        background: rgba(123, 194, 74, 0.2);
+        background: #7ec142;
         border-radius: 30px;
         padding: 0.5rem 1.5rem;
         transition: all 0.3s ease;
@@ -289,7 +287,7 @@ import { CommonModule } from '@angular/common';
       }
 
       .contact-button:hover {
-        background: #7bc24a;
+        background: #7ec142;
         transform: translateY(-2px);
         box-shadow: 0 4px 12px rgba(123, 194, 74, 0.3);
       }
@@ -332,7 +330,7 @@ import { CommonModule } from '@angular/common';
         top: 80px;
         left: 0;
         right: 0;
-        background: #26386e;
+        background: #1e3b6f;
         padding: 1rem 2rem;
         display: flex;
         flex-direction: column;
@@ -448,7 +446,7 @@ import { CommonModule } from '@angular/common';
       //   }
       // }
       mat-icon {
-        color: white;
+        color: #1e3b6f;
       }
       button[mat-button] {
         font-weight: 500;
