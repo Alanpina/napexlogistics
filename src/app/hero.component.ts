@@ -16,13 +16,12 @@ import { CommonModule } from '@angular/common';
       <div class="hero-content">
         <div class="content-wrapper">
           <h1 class="hero-title">
-            <span class="title-line">Gestión Logística</span>
-            <span class="title-line">Integral</span>
+            <span class="title-line">Gestión con Perspectiva</span>
+            <span class="title-line">Logística</span>
           </h1>
 
           <p class="hero-subtitle">
-            Optimizamos tu cadena de suministro para lograr <span class="highlight">eficiencia</span>,
-            <span class="highlight">rentabilidad</span> y <span class="highlight">satisfacción</span> del cliente.
+            Optimizamos la cadena de suministro, para asegurar la satisfacción del cliente y la eficiencia operativa
           </p>
         </div>
       </div>

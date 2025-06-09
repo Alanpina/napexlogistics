@@ -41,7 +41,7 @@ import { CommonModule } from '@angular/common';
             routerLink="/about"
             routerLinkActive="active"
           >
-            <span>¿Quiénes somos?</span>
+            <span>Nosotros</span>
           </a>
 
           <a

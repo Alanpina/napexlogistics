@@ -15,18 +15,15 @@ import { MatIconModule } from '@angular/material/icon';
         <div class="content-wrapper">
           <div class="text-content">
             <h2 class="section-title">
-              <span class="title-line">¿Quiénes Somos?</span>
+              <span class="title-line">Nosotros</span>
               <span class="title-decorator"></span>
             </h2>
 
             <p class="section-description">
-              En <strong>NAPEX LOGISTICS</strong> somos especialistas en
-              optimización de cadena de suministro, garantizando la eficiencia,
-              rentabilidad y satisfacción del cliente ofreciendo<span
-                class="highlight"
-              >
-                soluciones logísticas integrales.</span
-              >
+              En <strong class="highlight">NAPEX LOGISTICS</strong> es un gestor
+              logístico comprometido en optimizar la cadena de suministro,
+              garantizando la eficiencia, rentabilidad y satisfacción del
+              cliente.<span class="highlight"></span>
             </p>
           </div>
 

@@ -19,9 +19,10 @@ import { MatIconModule } from '@angular/material/icon';
           </h2>
 
           <p class="section-description">
-            Ofrecemos servicios integrales para todo tipo de operaciones de importación y exportación,
-            con distribución hasta el destino final. Nuestro conocimiento y procesos garantizan
-            <span class="highlight">optimización de tiempos y costos</span> en cada operación.
+            Ofrecemos servicios para todo tipo de operaciones de importación y
+            exportación, así como distribución del producto hasta el destino
+            final. Nuestro conocimiento y procesos nos permiten planificar cada operación para
+            <span class="highlight">optimizar tiempos y costos</span>.
           </p>
 
           <div class="features-grid">
@@ -52,188 +53,202 @@ import { MatIconModule } from '@angular/material/icon';
         </div>
 
         <div class="image-content">
-          <img src="assets/napex4.jpg" alt="Equipo de NAPEX LOGISTICS" loading="lazy" class="team-image">
+          <img
+            src="assets/napex4.jpg"
+            alt="Equipo de NAPEX LOGISTICS"
+            loading="lazy"
+            class="team-image"
+          />
           <div class="image-overlay"></div>
         </div>
       </div>
     </section>
   `,
-  styles: [`
-    /* Base Styles */
-    .why-section {
-      position: relative;
-      padding: 6rem 1rem;
-      background: #f8fafc;
-      overflow: hidden;
-    }
-
-    .background-pattern {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: radial-gradient(rgba(38, 56, 110, 0.08) 1px, transparent 1px);
-      background-size: 40px 40px;
-      opacity: 0.4;
-      z-index: 0;
-    }
-
-    .content-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      align-items: center;
-      position: relative;
-      z-index: 1;
-    }
-
-    /* Text Content */
-    .text-content {
-      padding: 1rem;
-    }
-
-    .section-title {
-      font-size: clamp(1.8rem, 4vw, 2.8rem);
-      margin-bottom: 1.5rem;
-      font-weight: 700;
-      line-height: 1.2;
-      color: #1e3b6f;
-    }
-
-    .accent {
-      color: #7ec142;
-    }
-
-    .section-description {
-      font-size: clamp(1rem, 1.5vw, 1.2rem);
-      line-height: 1.8;
-      color: #4a5568;
-      margin-bottom: 3rem;
-    }
-
-    .highlight {
-      color: #1e3b6f;
-      font-weight: 600;
-    }
-
-    /* Features Grid */
-    .features-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.5rem;
-      margin-bottom: 2rem;
-    }
-
-    .feature-card {
-      background: white;
-      padding: 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
-      border-left: 3px solid #7ec142;
-      transition: all 0.3s ease;
-    }
-
-    .feature-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-    }
-
-    .feature-icon {
-      width: 28px;
-      height: 28px;
-      background: #7ec142;
-      color: white;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 1rem;
-      font-weight: bold;
-      font-size: 1rem;
-    }
-
-    .feature-card h3 {
-      font-size: 1.1rem;
-      color: #1e3b6f;
-      margin-bottom: 0.5rem;
-      font-weight: 600;
-    }
-
-    .feature-card p {
-      font-size: 0.9rem;
-      color: #64748b;
-      line-height: 1.6;
-    }
-
-    /* Image Content */
-    .image-content {
-      position: relative;
-      height: 500px;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-    }
-
-    .team-image {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .image-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(to top, rgba(38, 56, 110, 0.3), transparent);
-    }
-
-    /* Responsive Design */
-    @media (max-width: 1024px) {
-      .content-container {
-        gap: 3rem;
-      }
-
-      .image-content {
-        height: 450px;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .content-container {
-        grid-template-columns: 1fr;
-      }
-
-      .text-content {
-        text-align: center;
-        padding: 0;
-      }
-
-      .features-grid {
-        grid-template-columns: 1fr;
-        max-width: 500px;
-        margin: 0 auto 2rem;
-      }
-
-      .image-content {
-        height: 400px;
-        order: -1;
-      }
-    }
-
-    @media (max-width: 480px) {
+  styles: [
+    `
+      /* Base Styles */
       .why-section {
-        padding: 4rem 1rem;
+        position: relative;
+        padding: 6rem 1rem;
+        background: #f8fafc;
+        overflow: hidden;
       }
 
-      .image-content {
-        height: 300px;
+      .background-pattern {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: radial-gradient(
+          rgba(38, 56, 110, 0.08) 1px,
+          transparent 1px
+        );
+        background-size: 40px 40px;
+        opacity: 0.4;
+        z-index: 0;
       }
-    }
-  `]
+
+      .content-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+      }
+
+      /* Text Content */
+      .text-content {
+        padding: 1rem;
+      }
+
+      .section-title {
+        font-size: clamp(1.8rem, 4vw, 2.8rem);
+        margin-bottom: 1.5rem;
+        font-weight: 700;
+        line-height: 1.2;
+        color: #1e3b6f;
+      }
+
+      .accent {
+        color: #7ec142;
+      }
+
+      .section-description {
+        font-size: clamp(1rem, 1.5vw, 1.2rem);
+        line-height: 1.8;
+        color: #4a5568;
+        margin-bottom: 3rem;
+      }
+
+      .highlight {
+        color: #1e3b6f;
+        font-weight: 600;
+      }
+
+      /* Features Grid */
+      .features-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .feature-card {
+        background: white;
+        padding: 1.5rem;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+        border-left: 3px solid #7ec142;
+        transition: all 0.3s ease;
+      }
+
+      .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      }
+
+      .feature-icon {
+        width: 28px;
+        height: 28px;
+        background: #7ec142;
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1rem;
+        font-weight: bold;
+        font-size: 1rem;
+      }
+
+      .feature-card h3 {
+        font-size: 1.1rem;
+        color: #1e3b6f;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+      }
+
+      .feature-card p {
+        font-size: 0.9rem;
+        color: #64748b;
+        line-height: 1.6;
+      }
+
+      /* Image Content */
+      .image-content {
+        position: relative;
+        height: 500px;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      }
+
+      .team-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .image-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          to top,
+          rgba(38, 56, 110, 0.3),
+          transparent
+        );
+      }
+
+      /* Responsive Design */
+      @media (max-width: 1024px) {
+        .content-container {
+          gap: 3rem;
+        }
+
+        .image-content {
+          height: 450px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .content-container {
+          grid-template-columns: 1fr;
+        }
+
+        .text-content {
+          text-align: center;
+          padding: 0;
+        }
+
+        .features-grid {
+          grid-template-columns: 1fr;
+          max-width: 500px;
+          margin: 0 auto 2rem;
+        }
+
+        .image-content {
+          height: 400px;
+          order: -1;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .why-section {
+          padding: 4rem 1rem;
+        }
+
+        .image-content {
+          height: 300px;
+        }
+      }
+    `,
+  ],
 })
 export class WhyChooseUsComponent {}

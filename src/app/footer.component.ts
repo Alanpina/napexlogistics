@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { CommonModule } from '@angular/common';
-
 @Component({
   selector: 'app-footer',
   standalone: true,
@@ -11,10 +10,10 @@ import { CommonModule } from '@angular/common';
       <div class="footer-container">
         <div class="footer-brand">
           <img src="assets/logo.png" alt="NAPEX LOGISTICS" class="footer-logo">
-          <p class="footer-tagline">Soluciones logísticas integrales para tu cadena de suministro</p>
+          <p class="footer-tagline">Gestión con Perspectiva Logística</p>
           <div class="social-links">
-            <i class="fa fa-whatsapp" aria-hidden="true"></i>
-            <i class="fa fa-linkedin" aria-hidden="true"></i>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
           </div>
         </div>
 
@@ -38,9 +37,10 @@ import { CommonModule } from '@angular/common';
           <h3>Enlaces rápidos</h3>
           <ul>
             <li><a href="#">Inicio</a></li>
-            <li><a href="#">¿Quienes Somos?</a></li>
+            <li><a href="#">Nosotros</a></li>
             <li><a href="#">Servicios</a></li>
             <li><a href="#">¿Por qué elegirnos?</a></li>
+            <li><a href="#">Contacto</a></li>
           </ul>
         </div>
       </div>
