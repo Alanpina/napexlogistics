@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
   template: `
     <section class="hero">
       <div class="hero-background">
-        <img class="hero-bg" src="assets/napex1.jpg" alt="Puerto logístico" loading="lazy" />
+        <img class="hero-bg" src="assets/napex1.png" alt="Puerto logístico" loading="lazy" />
         <div class="overlay-gradient"></div>
       </div>
 

@@ -54,7 +54,7 @@ import { MatIconModule } from '@angular/material/icon';
 
         <div class="image-content">
           <img
-            src="assets/napex4.jpg"
+            src="assets/napex3.jpg"
             alt="Equipo de NAPEX LOGISTICS"
             loading="lazy"
             class="team-image"
