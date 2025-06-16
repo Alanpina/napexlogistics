@@ -7,7 +7,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule, MatButtonModule],
   template: `
-    <section class="hero">
+    <section class="hero" id="home">
       <div class="hero-background">
         <img class="hero-bg" src="assets/napex1.png" alt="Puerto logístico" loading="lazy" />
         <div class="overlay-gradient"></div>

@@ -9,7 +9,7 @@ import { MatButtonModule } from '@angular/material/button';
   standalone: true,
   imports: [MatCardModule, MatIconModule, CommonModule, MatButtonModule],
   template: `
-    <section class="services-section">
+    <section class="services-section" id="services">
       <div class="background-pattern"></div>
 
       <div class="section-header">

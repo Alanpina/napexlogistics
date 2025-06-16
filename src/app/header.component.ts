@@ -30,7 +30,7 @@ import { CommonModule } from '@angular/common';
           <a
             mat-button
             class="nav-link"
-            routerLink="/"
+            (click)="scroll('home')"
             routerLinkActive="active"
           >
             <span>Inicio</span>
@@ -38,7 +38,7 @@ import { CommonModule } from '@angular/common';
           <a
             mat-button
             class="nav-link"
-            routerLink="/about"
+            (click)="scroll('about')"
             routerLinkActive="active"
           >
             <span>Nosotros</span>
@@ -47,7 +47,7 @@ import { CommonModule } from '@angular/common';
           <a
             mat-button
             class="nav-link"
-            routerLink="/services"
+            (click)="scroll('services')"
             routerLinkActive="active"
           >
             <span>Servicios</span>
@@ -55,43 +55,22 @@ import { CommonModule } from '@angular/common';
           <a
             mat-button
             class="nav-link"
-            routerLink="/why-us"
+            (click)="scroll('why-us')"
             routerLinkActive="active"
           >
             <span>¿Por qué elegirnos?</span>
           </a>
         </nav>
 
-        <!-- Menú de idioma -->
         <div class="actions-container">
-          <button mat-button class="contact-button" routerLink="/contact">
+          <button
+            mat-button
+            class="contact-button"
+            (click)="scroll('contact')"
+          >
             <mat-icon style="color: white;">email</mat-icon>
             <span>Contacto</span>
           </button>
-
-          <div class="language-selector">
-            <button
-              mat-icon-button
-              [matMenuTriggerFor]="menu"
-              aria-label="Seleccionar idioma"
-            >
-              <mat-icon>language</mat-icon>
-            </button>
-            <mat-menu #menu="matMenu" class="language-menu">
-              <button mat-menu-item>
-                <span class="menu-item-content">
-                  <span class="flag-icon">🇪🇸</span>
-                  <span>Español</span>
-                </span>
-              </button>
-              <button mat-menu-item>
-                <span class="menu-item-content">
-                  <span class="flag-icon">🇺🇸</span>
-                  <span>English</span>
-                </span>
-              </button>
-            </mat-menu>
-          </div>
         </div>
 
         <!-- Menú Hamburguesa - Mobile -->
@@ -106,13 +85,12 @@ import { CommonModule } from '@angular/common';
       </div>
 
       <!-- Menú Mobile -->
-
       <ng-container *ngIf="mobileMenuOpen">
         <div class="mobile-menu" [class.active]="mobileMenuOpen">
           <a
             mat-button
             class="mobile-link"
-            routerLink="/"
+            (click)="scroll('home')"
             (click)="mobileMenuOpen = false"
           >
             <span>Inicio</span>
@@ -120,36 +98,35 @@ import { CommonModule } from '@angular/common';
           <a
             mat-button
             class="mobile-link"
-            routerLink="/about"
+            (click)="scroll('about')"
             (click)="mobileMenuOpen = false"
           >
-            <span>¿Quiénes somos?</span>
+            <span>Nosotros</span>
           </a>
           <a
             mat-button
             class="mobile-link"
-            routerLink="/why-us"
+            (click)="scroll('services')"
+            (click)="mobileMenuOpen = false"
+          >
+            <span>Servicios</span>
+          </a>
+          <a
+            mat-button
+            class="mobile-link"
+            (click)="scroll('why-us')"
             (click)="mobileMenuOpen = false"
           >
             <span>¿Por qué elegirnos?</span>
           </a>
           <a
             mat-button
-            class="mobile-link"
-            routerLink="/contact"
+            class="mobile-link contact-link"
+            (click)="scroll('contact')"
             (click)="mobileMenuOpen = false"
           >
             <span>Contacto</span>
           </a>
-
-          <div class="mobile-language-selector">
-            <button mat-button (click)="changeLanguage('es')">
-              <span class="flag-icon">🇪🇸</span> Español
-            </button>
-            <button mat-button (click)="changeLanguage('en')">
-              <span class="flag-icon">🇺🇸</span> English
-            </button>
-          </div>
         </div>
       </ng-container>
     </mat-toolbar>
@@ -157,7 +134,7 @@ import { CommonModule } from '@angular/common';
   styles: [
     `
       .toolbar {
-        background: linear-gradient(135deg, #F5F5F5 0%, #F5F5F5 100%);
+        background: linear-gradient(135deg, #f5f5f5 0%, #f5f5f5 100%);
         color: white;
         padding: 0 2rem;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -330,7 +307,7 @@ import { CommonModule } from '@angular/common';
         top: 80px;
         left: 0;
         right: 0;
-        background: linear-gradient( 135deg, #F5F5F5 0%, #F5F5F5 100%);
+        background: linear-gradient(135deg, #f5f5f5 0%, #f5f5f5 100%);
         padding: 1rem 2rem;
         display: flex;
         flex-direction: column;
@@ -416,7 +393,6 @@ import { CommonModule } from '@angular/common';
         }
       }
 
-
       mat-icon {
         color: #1e3b6f;
       }
@@ -428,14 +404,13 @@ import { CommonModule } from '@angular/common';
   ],
 })
 export class HeaderComponent {
+  scroll(id: string) {
+    let el = document.getElementById(id) as HTMLElement;
+    el.scrollIntoView({ behavior: 'smooth' });
+  }
   mobileMenuOpen = false;
 
   toggleMobileMenu() {
     this.mobileMenuOpen = !this.mobileMenuOpen;
-  }
-
-  changeLanguage(lang: string) {
-    // Implementar cambio de idioma
-    this.mobileMenuOpen = false;
   }
 }

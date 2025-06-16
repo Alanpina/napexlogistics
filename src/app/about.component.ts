@@ -8,7 +8,7 @@ import { MatIconModule } from '@angular/material/icon';
   standalone: true,
   imports: [CommonModule, MatButtonModule, MatIconModule],
   template: `
-    <section class="about-section">
+    <section class="about-section" id="about">
       <div class="background-pattern"></div>
 
       <div class="about-container">
