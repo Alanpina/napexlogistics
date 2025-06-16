@@ -16,8 +16,12 @@ import { CommonModule } from '@angular/common';
           />
           <p class="footer-tagline">Gestión con perspectiva Logística</p>
           <div class="social-links">
-            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
-            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://wa.me/+523141029592" target="_blank"
+              ><i class="fa-brands fa-whatsapp"></i
+            ></a>
+            <a href="mailto:contacto@napexlogistics.com"
+              ><i class="fa-solid fa-envelope"></i
+            ></a>
           </div>
         </div>
 
@@ -129,6 +133,10 @@ import { CommonModule } from '@angular/common';
         width: 40px;
         height: 2px;
         background: #7ec142;
+      }
+
+      :host a:-webkit-any-link {
+        text-decoration: none;
       }
 
       .contact-item {
