@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
       <div class="footer-container">
         <div class="footer-brand">
           <img src="assets/logo.png" alt="NAPEX LOGISTICS" class="footer-logo">
-          <p class="footer-tagline">Gestión con Perspectiva Logística</p>
+          <p class="footer-tagline">Gestión con perspectiva Logística</p>
           <div class="social-links">
             <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
             <a href="#"><i class="fa-brands fa-linkedin"></i></a>

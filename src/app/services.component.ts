@@ -32,7 +32,6 @@ import { MatButtonModule } from '@angular/material/button';
             class="service-card"
             [style.--hue]="servicio.colorHue"
           >
-            <div class="card-badge">{{ servicio.badge }}</div>
             <div class="card-icon-container">
               <mat-icon class="card-icon">{{ servicio.icon }}</mat-icon>
             </div>
@@ -185,7 +184,7 @@ import { MatButtonModule } from '@angular/material/button';
       }
 
       .card-icon {
-        font-size: 1.6rem;
+        font-size: 2rem;
         color: #7ec142;
       }
 
@@ -230,33 +229,9 @@ import { MatButtonModule } from '@angular/material/button';
         background-color: #7ec142;
       }
 
-      .service-cta {
-        color: hsl(var(--hue), 80%, 50%);
-        border-color: hsl(var(--hue), 80%, 80%);
-        font-weight: 500;
-        padding: 0.6rem 1.5rem;
-        border-radius: 50px;
-        align-self: center;
-        transition: all 0.3s ease;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-      }
-
-      .service-cta:hover {
-        background: hsl(var(--hue), 80%, 96%);
-        transform: translateY(-2px);
-      }
-
-      .service-cta mat-icon {
-        font-size: 1.2rem;
-        width: auto;
-        height: auto;
-        transition: transform 0.3s ease;
-      }
-
-      .service-cta:hover mat-icon {
-        transform: translateX(4px);
+      .mat-icon {
+        height: 32px;
+        width: 32px;
       }
 
       /* Responsive Design */

@@ -16,7 +16,7 @@ import { CommonModule } from '@angular/common';
       <div class="hero-content">
         <div class="content-wrapper">
           <h1 class="hero-title">
-            <span class="title-line">Gestión con Perspectiva</span>
+            <span class="title-line">Gestión con perspectiva</span>
             <span class="title-line">Logística</span>
           </h1>
 

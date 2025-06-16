@@ -20,10 +20,10 @@ import { MatIconModule } from '@angular/material/icon';
             </h2>
 
             <p class="section-description">
-              En <strong class="highlight">NAPEX LOGISTICS</strong> es un gestor
+              <strong class="highlight">NAPEX LOGISTICS</strong> es un gestor
               logístico comprometido en optimizar la cadena de suministro,
               garantizando la eficiencia, rentabilidad y satisfacción del
-              cliente.<span class="highlight"></span>
+              cliente.
             </p>
           </div>
 
@@ -110,7 +110,7 @@ import { MatIconModule } from '@angular/material/icon';
       }
 
       .highlight {
-        color: #1e3b6f;
+        color: #7ec142;
         font-weight: 600;
       }
 

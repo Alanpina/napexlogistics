@@ -21,7 +21,8 @@ import { MatIconModule } from '@angular/material/icon';
           <p class="section-description">
             Ofrecemos servicios para todo tipo de operaciones de importación y
             exportación, así como distribución del producto hasta el destino
-            final. Nuestro conocimiento y procesos nos permiten planificar cada operación para
+            final. Nuestro conocimiento y procesos nos permiten planificar cada
+            operación para
             <span class="highlight">optimizar tiempos y costos</span>.
           </p>
 
@@ -53,13 +54,15 @@ import { MatIconModule } from '@angular/material/icon';
         </div>
 
         <div class="image-content">
-          <img
-            src="assets/napex3.jpg"
-            alt="Equipo de NAPEX LOGISTICS"
-            loading="lazy"
-            class="team-image"
-          />
-          <div class="image-overlay"></div>
+          <div class="image-wrapper">
+            <img
+              src="assets/napex3.jpg"
+              alt="Equipo de NAPEX LOGISTICS"
+              loading="lazy"
+              class="team-image"
+            />
+            <div class="image-overlay"></div>
+          </div>
         </div>
       </div>
     </section>
@@ -179,18 +182,32 @@ import { MatIconModule } from '@angular/material/icon';
       }
 
       /* Image Content */
+      /* Sección de imagen */
       .image-content {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        height: 100%;
+      }
+
+      .image-wrapper {
         position: relative;
-        height: 500px;
-        border-radius: 12px;
+        border-radius: 16px;
         overflow: hidden;
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        box-shadow: var(--shadow);
+        flex-grow: 1;
+        min-height: 400px;
       }
 
       .team-image {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      .image-wrapper:hover .team-image {
+        transform: scale(1.03);
       }
 
       .image-overlay {
@@ -201,7 +218,7 @@ import { MatIconModule } from '@angular/material/icon';
         height: 100%;
         background: linear-gradient(
           to top,
-          rgba(38, 56, 110, 0.3),
+          rgba(30, 59, 111, 0.4),
           transparent
         );
       }
@@ -211,9 +228,12 @@ import { MatIconModule } from '@angular/material/icon';
         .content-container {
           gap: 3rem;
         }
+      }
 
+      @media (max-width: 992px) {
         .image-content {
-          height: 450px;
+          max-width: 600px;
+          margin: 0 auto;
         }
       }
 
@@ -233,9 +253,8 @@ import { MatIconModule } from '@angular/material/icon';
           margin: 0 auto 2rem;
         }
 
-        .image-content {
-          height: 400px;
-          order: -1;
+        .image-wrapper {
+          min-height: 350px;
         }
       }
 

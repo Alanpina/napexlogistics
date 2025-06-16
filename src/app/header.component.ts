@@ -166,7 +166,7 @@ import { CommonModule } from '@angular/common';
         left: 0;
         right: 0;
         z-index: 999;
-        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.35);
         height: 80px;
       }
 
@@ -330,7 +330,7 @@ import { CommonModule } from '@angular/common';
         top: 80px;
         left: 0;
         right: 0;
-        background: #1e3b6f;
+        background: linear-gradient( 135deg, #F5F5F5 0%, #F5F5F5 100%);
         padding: 1rem 2rem;
         display: flex;
         flex-direction: column;
@@ -416,35 +416,7 @@ import { CommonModule } from '@angular/common';
         }
       }
 
-      // /* Responsive adjustments */
-      // @media (max-width: 768px) {
-      //   .toolbar {
-      //     padding: 0 1rem;
-      //   }
 
-      //   .nav-links {
-      //     display: none; /* Menú hamburguesa sería ideal aquí */
-      //   }
-
-      //   .logo-container {
-      //     display: flex;
-      //     align-items: center;
-      //     gap: 12px;
-      //     transition: transform 0.3s ease;
-      //   }
-
-      //   .logo-container:hover {
-      //     transform: scale(1.03);
-      //   }
-
-      //   .logo {
-      //     height: 40px;
-      //     background-color: rgba(255, 255, 255, 0.85);
-      //     padding: 4px 8px;
-      //     border-radius: 4px;
-      //     width: auto;
-      //   }
-      // }
       mat-icon {
         color: #1e3b6f;
       }
