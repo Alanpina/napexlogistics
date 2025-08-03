@@ -348,6 +348,11 @@ import { CommonModule } from '@angular/common';
         padding: 0.5rem 0;
       }
 
+    .mat-toolbar .mat-mdc-button-base.mat-mdc-button-base.mat-unthemed {
+    --mdc-text-button-label-text-color: #1e3b6f;
+    --mdc-outlined-button-label-text-color: #1e3b6f;
+}
+
       /* Responsive Styles */
       @media (max-width: 1024px) {
         .header-container {
