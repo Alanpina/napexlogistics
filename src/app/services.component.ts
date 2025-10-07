@@ -38,7 +38,14 @@ import { MatButtonModule } from '@angular/material/button';
             <h3 class="service-name">{{ servicio.nombre }}</h3>
             <p class="service-description">{{ servicio.descripcion }}</p>
             <ul class="service-features">
-              <li *ngFor="let feature of servicio.features">{{ feature }}</li>
+              <li
+                *ngFor="let feature of servicio.features"
+                [class.no-before]="
+                  feature === '(carga general, IMO y reguladas por SEDENA)'
+                "
+              >
+                {{ feature }}
+              </li>
             </ul>
           </mat-card>
         </div>
@@ -229,6 +236,10 @@ import { MatButtonModule } from '@angular/material/button';
         background-color: #7ec142;
       }
 
+      .service-features li.no-before::before {
+        content: none;
+      }
+
       .mat-icon {
         height: 32px;
         width: 32px;
@@ -315,11 +326,10 @@ export class ServicesComponent {
     {
       nombre: 'Transporte de mercancías',
       icon: 'local_shipping',
-      descripcion:
-        'Distribución del producto hasta el destino final.',
+      descripcion: 'Distribución del producto hasta el destino final.',
       features: [
-        'Conexión marítima y aérea',
         'Fletes terrestres',
+        '(carga general, IMO y reguladas por SEDENA)',
         'Seguro de mercancías',
         'Monitoreo 24/7',
       ],
